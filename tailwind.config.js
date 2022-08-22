@@ -15,6 +15,7 @@ module.exports = {
       },
       borderWidth: {
         's': '0.5px',
+        'l': '1px',
       },
       height: {
         'coursel': '35rem',

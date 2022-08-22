@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.Home',[
-        'title' => 'Home'
-    ]);
-});
+Route::get('/', [ViewController::class, 'home']);
+Route::get('/tour', [ViewController::class, 'tour']);
