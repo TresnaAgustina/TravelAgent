@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* hide scroll bar - global */
 body::-webkit-scrollbar {
   display: none;
 }
 
+/* dropdown button for tour filter - tour page */
 #touch:checked + .slide {
   height: auto;
 } 

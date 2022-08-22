@@ -33,9 +33,6 @@
                     <a href="#" class="block py-2 pr-4 pl-3 text-white rounded hover:text-primary hover:bg-white md:border-0 md:hover:underline md:hover:underline-offset-2 md:hover:text-secondary md:hover:bg-transparent md:p-0">Gallery</a>
                   </li>
                   <li>
-                    <a href="#" class="block py-2 pr-4 pl-3 text-white rounded hover:text-primary hover:bg-white md:border-0 md:hover:underline md:hover:underline-offset-2 md:hover:text-secondary md:hover:bg-transparent md:p-0">Blog</a>
-                  </li>
-                  <li>
                     <a href="#" class="block py-2 pr-4 pl-3 text-white rounded hover:text-primary hover:bg-white md:border-0 md:hover:underline md:hover:underline-offset-2 md:hover:text-secondary md:hover:bg-transparent md:p-0">Contact</a>
                   </li>
 
