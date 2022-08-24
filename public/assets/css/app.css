@@ -10,4 +10,12 @@ body::-webkit-scrollbar {
 /* dropdown button for tour filter - tour page */
 #touch:checked + .slide {
   height: auto;
-} 
+}
+
+.tour_card{
+  display:none;
+}
+
+.show{
+  display: block;
+}
