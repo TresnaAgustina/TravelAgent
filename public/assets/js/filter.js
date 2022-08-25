@@ -1,5 +1,3 @@
-// dropdown button
-
 // Project Filter
 filterSelection("all")
 function filterSelection(c) {

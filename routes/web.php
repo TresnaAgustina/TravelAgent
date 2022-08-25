@@ -16,3 +16,4 @@ use App\Http\Controllers\ViewController;
 
 Route::get('/', [ViewController::class, 'home']);
 Route::get('/tour', [ViewController::class, 'tour']);
+Route::get('/detail', [ViewController::class, 'tourDetail']);

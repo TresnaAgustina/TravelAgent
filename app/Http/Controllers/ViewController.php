@@ -21,4 +21,11 @@ class ViewController extends Controller
             'title' => 'Tour List'
         ]);
     }
+
+    public function tourDetail()
+    {
+        return view('pages.TourDetail', [
+            'title' => 'Package Name'
+        ]);
+    }
 }
