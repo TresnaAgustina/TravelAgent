@@ -37,7 +37,7 @@
                   </li>
 
                   <li>
-                    <a href="#" class="block py-2 pr-4 pl-3 text-text w-full rounded hover:text-primary hover:bg-white md:border-0 md:hover:text-primary duration-100 md:py-2 font-bold bg-secondary"><i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> Login</a>
+                    <a href="{{ url('/login') }}" class="block py-2 pr-4 pl-3 text-text w-full rounded hover:text-primary hover:bg-white md:border-0 md:hover:text-primary duration-100 md:py-2 font-bold bg-secondary"><i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> Login</a>
                   </li>
                 </ul>
               </div>

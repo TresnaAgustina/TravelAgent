@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,8 @@ use App\Http\Controllers\ViewController;
 Route::get('/', [ViewController::class, 'home']);
 Route::get('/tour', [ViewController::class, 'tour']);
 Route::get('/detail', [ViewController::class, 'tourDetail']);
+
+Route::get('/dashboard', [ViewController::class, 'dashboard']);
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);

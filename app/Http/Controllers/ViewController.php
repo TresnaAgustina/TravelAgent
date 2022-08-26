@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\DB;
 
 class ViewController extends Controller
 {
@@ -26,6 +25,13 @@ class ViewController extends Controller
     {
         return view('pages.TourDetail', [
             'title' => 'Package Name'
+        ]);
+    }
+
+    public function dashboard()
+    {
+        return view('admin.Dashboard', [
+            'title' => 'Dashboard'
         ]);
     }
 }
