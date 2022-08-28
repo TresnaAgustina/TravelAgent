@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,22 @@ use App\Http\Controllers\LoginController;
 |
 */
 
+// View
 Route::get('/', [ViewController::class, 'home']);
 Route::get('/tour', [ViewController::class, 'tour']);
 Route::get('/detail', [ViewController::class, 'tourDetail']);
-
 Route::get('/dashboard', [ViewController::class, 'dashboard']);
 
-Route::get('/login', [LoginController::class, 'index']);
+// Login 
+Route::get('/login', [LoginController::class, 'index'])
+      ->middleware('web')
+      ->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+// logout
+Route::get('/logout', [LoginController::class, 'destroy']);
+
+
+// Register
+Route::get('/regist', [RegistController::class, 'index']);
+Route::post('/regist', [RegistController::class, 'store']);

@@ -36,9 +36,15 @@
                     <a href="#" class="block py-2 pr-4 pl-3 text-white rounded hover:text-primary hover:bg-white md:border-0 md:hover:underline md:hover:underline-offset-2 md:hover:text-secondary md:hover:bg-transparent md:p-0">Contact</a>
                   </li>
 
+                  @if (isset(Auth::user()->name))
+                  <li>
+                    <a href="{{ url('/logout') }}" class="block py-2 pr-4 pl-3 text-text w-full rounded hover:text-primary hover:bg-white md:border-0 md:hover:text-primary duration-100 md:py-2 font-bold bg-secondary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                  </li>
+                  @else
                   <li>
                     <a href="{{ url('/login') }}" class="block py-2 pr-4 pl-3 text-text w-full rounded hover:text-primary hover:bg-white md:border-0 md:hover:text-primary duration-100 md:py-2 font-bold bg-secondary"><i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> Login</a>
                   </li>
+                  @endif
                 </ul>
               </div>
             </div>
