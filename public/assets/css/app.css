@@ -23,3 +23,8 @@ body::-webkit-scrollbar {
 .show{
   display: block;
 }
+
+.sideCont.open{
+  left: 0;
+  transition: ease-in-out .2s;
+}

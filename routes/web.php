@@ -21,6 +21,7 @@ Route::get('/', [ViewController::class, 'home']);
 Route::get('/tour', [ViewController::class, 'tour']);
 Route::get('/detail', [ViewController::class, 'tourDetail']);
 Route::get('/dashboard', [ViewController::class, 'dashboard']);
+Route::get('/main', [ViewController::class, 'main']);
 
 // Login 
 Route::get('/login', [LoginController::class, 'index'])

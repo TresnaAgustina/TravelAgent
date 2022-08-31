@@ -12,6 +12,7 @@ module.exports = {
         'text': '#373D43',
         'paragraph': '#596067',
         'hover': '#3471CC',
+        'bg-hover': '#FBFBFB',
       },
       borderWidth: {
         's': '0.5px',
@@ -19,6 +20,9 @@ module.exports = {
       },
       height: {
         'coursel': '35rem',
+      },
+      inset: {
+        '50': '-12.5rem'
       }
     },
   },

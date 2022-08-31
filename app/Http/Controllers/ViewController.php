@@ -34,4 +34,11 @@ class ViewController extends Controller
             'title' => 'Dashboard'
         ]);
     }
+
+    public function main()
+    {
+        return view('admin.sub.Create', [
+            'title' => 'Create Post'
+        ]);
+    }
 }
