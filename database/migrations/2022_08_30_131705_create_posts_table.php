@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('detail_id');
+            $table->foreignId('category_id');
+            $table->string('package_img');
+            $table->string('package_code')->unique();
+            $table->string('package_category');
+            $table->string('package_name');
+            $table->text('package_desc');
+            $table->string('package_price');
+            $table->string('price_include');
+            $table->string('price_exlude');
             $table->timestamps();
         });
     }
