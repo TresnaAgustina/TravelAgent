@@ -35,7 +35,7 @@ class RegistController extends Controller
 
         Auth::login($admin);
 
-        return redirect()->intended('/login');
+        return redirect()->intended('login');
     }
 
 }

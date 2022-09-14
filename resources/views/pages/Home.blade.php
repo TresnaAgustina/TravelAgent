@@ -57,73 +57,25 @@
     {{-- card section wraper --}}
     <div class="card_section mt-4 xl:px-5 2xl:px-0 flex flex-col h-auto">
      <div class="card_wrap flex justify-center xl:justify-start self-center container gap-4 flex-wrap lg:flex-nowrap">
-        {{-- single card --}}      
-        <div class="max-w-xs rounded-lg  shadow-md bg-secondary">
-            <a href="#">
-                <img class="rounded-t-lg" src="{{ asset('assets/img/slide1.svg') }}" alt="">
-            </a>
-            <div class="p-5">
+        
+        {{-- single card --}}   
+        @foreach ($posts as $p)
+            <div class="max-w-xs rounded-lg  shadow-md bg-secondary">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight color-text">Package Name</h5>
+                    <img class="rounded-t-lg" src="{{ asset('storage/'.$p-> image) }}" alt="">
                 </a>
-                <p class="mb-3 font-normal text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis et potenti dictum suscipit velit etiam.</p>
-                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-md hover:bg-hover focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primary ">
-                    Read more
-                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight color-text">{{ $p->name }}</h5>
+                    </a>
+                    <p class="mb-3 font-normal block h-14 text-paragraph break-all">{{ Str::limit("$p->description", 60, '...') }}</p>
+                    <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-md hover:bg-hover focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primary ">
+                        Read more
+                        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
             </div>
-        </div>
-
-        {{-- single card --}}      
-        <div class="max-w-xs rounded-lg  shadow-md bg-secondary">
-            <a href="#">
-                <img class="rounded-t-lg" src="{{ asset('assets/img/slide2.svg') }}" alt="">
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight color-text">Package Name</h5>
-                </a>
-                <p class="mb-3 font-normal text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis et potenti dictum suscipit velit etiam.</p>
-                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-md hover:bg-hover focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primary ">
-                    Read more
-                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-
-        {{-- single card --}}      
-        <div class="max-w-xs rounded-lg  shadow-md bg-secondary">
-            <a href="#">
-                <img class="rounded-t-lg" src="{{ asset('assets/img/img1.svg') }}" alt="">
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight color-text">Package Name</h5>
-                </a>
-                <p class="mb-3 font-normal text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis et potenti dictum suscipit velit etiam.</p>
-                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-md hover:bg-hover focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primary ">
-                    Read more
-                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-
-        {{-- single card --}}      
-        <div class="max-w-xs rounded-lg shadow-md bg-secondary">
-            <a href="#">
-                <img class="rounded-t-lg" src="{{ asset('assets/img/img3.svg') }}" alt="">
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight color-text">Package Name</h5>
-                </a>
-                <p class="mb-3 font-normal text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis et potenti dictum suscipit velit etiam.</p>
-                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-md hover:bg-hover focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-primary ">
-                    Read more
-                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
+        @endforeach   
     </div>
 
     {{-- button view more --}}

@@ -1,74 +1,74 @@
-const dragArea = document.querySelector('.drag__area');
-const dragText = document.querySelector('.header');
+// const dragArea = document.querySelector('.drag__area');
+// const dragText = document.querySelector('.header');
 
-let button = document.querySelector('.button');
-let input = document.querySelector('.input');
+// let button = document.querySelector('.button');
+// let input = document.querySelector('.input');
 
-let file;
+// let file;
 
-button.onclick = () => {
-    input.click();
-}
+// button.onclick = () => {
+//     input.click();
+// }
 
-// for browse
-input.addEventListener('change', function () {
-    file = this.files[0];
+// // for browse
+// input.addEventListener('change', function () {
+//     file = this.files[0];
 
-    dragArea.classList.add('active');
-    displaFile()
-})
-
-
-// for file dragover inside the drag area
-dragArea.addEventListener('dragover', (event) => {
-    event.preventDefault();
-
-    dragText.textContent = "Release File";
-    dragArea.classList.add("active");
-
-});
+//     dragArea.classList.add('active');
+//     displaFile()
+// })
 
 
-// for file leave the drag area
-dragArea.addEventListener('dragleave', (event) => {
+// // for file dragover inside the drag area
+// dragArea.addEventListener('dragover', (event) => {
+//     event.preventDefault();
 
-    dragText.textContent = "Drag and Drop";
-    dragArea.classList.remove("active");
+//     dragText.textContent = "Release File";
+//     dragArea.classList.add("active");
 
-
-});
-
-
-// for file dropped inside drag area
-dragArea.addEventListener('drop', (event) => {
-    event.preventDefault();
-
-    // to accses img
-    file = event.dataTransfer.files[0];
-
-    displaFile()
-});
+// });
 
 
-function displaFile() {
-    // acces file type
-    let fileType = file.type;
+// // for file leave the drag area
+// dragArea.addEventListener('dragleave', (event) => {
 
-    // for selection file type
-    let validExtensions = ['image/jpg', 'image/jpeg', 'image/png', 'image/xml'];
+//     dragText.textContent = "Drag and Drop";
+//     dragArea.classList.remove("active");
 
-    if (validExtensions.includes(fileType)) {
-        let fileReader = new FileReader();
 
-        fileReader.onload = () => {
-            let fileURL = fileReader.result;
+// });
 
-            let imgTag = `<img src="${fileURL}" alt="">`
-            dragArea.innerHTML = imgTag;
-        };
-        fileReader.readAsDataURL(file);
-    } else {
-        alert("This File Type is Not Supported")
-        dropArea.classList.remove('active');
-    }
-}
+
+// // for file dropped inside drag area
+// dragArea.addEventListener('drop', (event) => {
+//     event.preventDefault();
+
+//     // to accses img
+//     file = event.dataTransfer.files[0];
+
+//     displaFile()
+// });
+
+
+// function displaFile() {
+//     // acces file type
+//     let fileType = file.type;
+
+//     // for selection file type
+//     let validExtensions = ['image/jpg', 'image/jpeg', 'image/png', 'image/xml'];
+
+//     if (validExtensions.includes(fileType)) {
+//         let fileReader = new FileReader();
+
+//         fileReader.onload = () => {
+//             let fileURL = fileReader.result;
+
+//             let imgTag = `<img src="${fileURL}" alt="">`
+//             dragArea.innerHTML = imgTag;
+//         };
+//         fileReader.readAsDataURL(file);
+//     } else {
+//         alert("This File Type is Not Supported")
+//         dropArea.classList.remove('active');
+//     }
+// }

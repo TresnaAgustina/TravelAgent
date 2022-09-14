@@ -15,16 +15,20 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('detail_id');
-            $table->foreignId('category_id');
-            $table->string('package_img');
-            $table->string('package_code')->unique();
-            $table->string('package_category');
-            $table->string('package_name');
-            $table->text('package_desc');
-            $table->string('package_price');
-            $table->string('price_include');
-            $table->string('price_exlude');
+            $table->string('image')->nullable();
+            $table->integer('code')->unique();
+            $table->string('category');
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('price');
+            $table->string('price_include')->nullable();
+            $table->string('price_exlude')->nullable();
+            $table->text('destination1')->nullable();
+            $table->text('destination2')->nullable();
+            $table->text('destination3')->nullable();
+            $table->text('destination4')->nullable();
+            $table->text('destination5')->nullable();
+            $table->text('destination6')->nullable();
             $table->timestamps();
         });
     }
