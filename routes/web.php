@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistController;
+use App\Http\Controllers\CreatePostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,16 @@ use App\Http\Controllers\RegistController;
 */
 
 // View
-Route::get('/', [ViewController::class, 'home']);
-Route::get('/tour', [ViewController::class, 'tour']);
-Route::get('/detail', [ViewController::class, 'tourDetail']);
-Route::get('/dashboard', [ViewController::class, 'dashboard']);
-Route::get('/main', [ViewController::class, 'main']);
+Route::get('/', [ViewController::class, 'home'])
+      ->middleware('web');
+Route::get('/tour', [ViewController::class, 'tour'])
+      ->middleware('web');
+Route::get('/detail', [ViewController::class, 'tourDetail'])
+      ->middleware('web');
+Route::get('/dashboard', [ViewController::class, 'dashboard'])
+      ->middleware('auth');
+Route::get('/create', [ViewController::class, 'create'])
+      ->middleware('auth');
 
 // Login 
 Route::get('/login', [LoginController::class, 'index'])
@@ -36,3 +42,6 @@ Route::get('/logout', [LoginController::class, 'destroy']);
 // Register
 Route::get('/regist', [RegistController::class, 'index']);
 Route::post('/regist', [RegistController::class, 'store']);
+
+// Create Post
+Route::post('/create', [CreatePostController::class, 'store']);

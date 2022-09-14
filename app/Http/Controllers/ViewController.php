@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ViewController extends Controller
 {
@@ -30,12 +31,14 @@ class ViewController extends Controller
 
     public function dashboard()
     {
-        return view('admin.Dashboard', [
+        $admin = DB::table('users')->get();
+
+        return view('admin.sub.Welcome',compact('admin'), [
             'title' => 'Dashboard'
         ]);
     }
 
-    public function main()
+    public function create()
     {
         return view('admin.sub.Create', [
             'title' => 'Create Post'
